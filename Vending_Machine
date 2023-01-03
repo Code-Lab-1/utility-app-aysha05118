@@ -1,0 +1,84 @@
+print("Welcome to Icecream World! \nGet your favourite icecream in one click")
+
+#Defining the price of ice cream
+
+price = 2
+print("Please deposit 2$ to buy an ice cream.")
+
+#Defining the money deposit
+
+money_deposit = float(input("Insert Money"))
+
+#Checking if the deposited money is enough to buy ice cream
+
+if money_deposit >= price:
+    print("You have deposited enough money to buy an ice cream.")
+
+print("Choose your flavour:")
+print("1.Vanilla")
+print("2.Chocolate")
+print("3.Strawberry")
+print("4.Spanich delight")
+print("5.Butterscotch")
+choice=int(input("Enter your choice(1/2/3/4/5):"))
+
+if choice==1:
+  print("You have chosen Vanilla flavour icecream, \nExcellent choice!")
+elif choice==2:
+  print("You have chosen chocolate flavour icecream, \nExcellent choice!") 
+elif choice==3:
+  print("You have chosen Strawberry flavour icecream, \nExcellent choice!")   
+elif choice==4:
+  print("You have chosen Spanich delight flavour icecream, \nExcellent choice!")   
+elif choice==5:
+  print("You have chosen Butterscotch flavour icecream, \nExcellent choice!")     
+else:
+  print("Invalid choice!")  
+
+print("Do you need any toppings?")
+choice=int(input("if YES choose 1, if NO choose 0(1/0):"))
+
+if choice==1:
+  print("Extra 1$ should be added for the toppings")
+else:
+    print("Your icecream is on processing...\n\tThankyou, Enjoy the taste of Heaven:)")
+
+
+money_deposit = float(input(" deposit 1$ for your toppings"))
+Extra_price_for_toppings = 1
+
+#Checking if the deposited money is enough to put toppings
+if money_deposit >= Extra_price_for_toppings :
+    print("You have deposited enough money to put toppings.")
+
+print("Please choose your toppings that you wish to have on your icecream:")
+
+#Defining the list of toppings
+
+toppings = ["1.Sprinkles", "2.Caramel syrup", "3.Mixed Nuts", "4.Cherries", "5.Chocolate Chips"]
+print(toppings[0])
+print(toppings[1])
+print(toppings[2])
+print(toppings[3])
+print(toppings[4])
+choice=int(input("Enter your choice(1/2/3/4/5):"))
+
+if choice==1:
+  print("You have chosen Sprinkles on your icecream, \nExcellent choice!")
+elif choice==2:
+  print("You have chosen Caramel syrup on your icecream, \nExcellent choice!") 
+elif choice==3:
+  print("You have chosen Mixed Nuts on your icecream, \nExcellent choice!")   
+elif choice==4:
+  print("You have chosen Cherries on your icecream, \nExcellent choice!")   
+elif choice==5:
+  print("You have chosen Chocolate chips on your icecream, \nExcellent choice!")     
+else:
+  print("Invalid choice!")  
+
+choice=int(input("Proceed to buy? if YES choose 1, if NO choose 0(1/0):"))
+
+if choice==1:
+ print("Please wait, Your icecream is on processing... \n\tThank you, Enjoy the taste of Heaven:)")
+else:
+  print("Sorry! :(") 
