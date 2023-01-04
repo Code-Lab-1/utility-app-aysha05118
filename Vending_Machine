@@ -8,12 +8,18 @@ print("Please deposit 2$ to buy an ice cream.")
 #Defining the money deposit
 
 money_deposit = float(input("Insert Money"))
+change=money_deposit-price
 
 #Checking if the deposited money is enough to buy ice cream
 
-if money_deposit >= price:
-    print("You have deposited enough money to buy an ice cream.")
-
+if money_deposit == price:
+  print("You have deposited enough money to buy an ice cream.")
+elif money_deposit >= price:
+  print("Please take your change: ")
+  print(change)
+else:
+  print("You didn't deposited enough money")  
+  
 print("Choose your flavour:")
 print("1.Vanilla")
 print("2.Chocolate")
@@ -33,24 +39,31 @@ elif choice==4:
 elif choice==5:
   print("You have chosen Butterscotch flavour icecream, \nExcellent choice!")     
 else:
-  print("Invalid choice!")  
+  print("Invalid choice! Please choose a number within 1 to 5")
 
 print("Do you need any toppings?")
 choice=int(input("if YES choose 1, if NO choose 0(1/0):"))
 
 if choice==1:
-  print("Extra 1$ should be added for the toppings")
-else:
+    print("Extra 1$ should be added for the toppings")   
+elif choice==0:
     print("Your icecream is on processing...\n\tThankyou, Enjoy the taste of Heaven:)")
-
+else:
+    print("Invalid choice!")
 
 money_deposit = float(input(" deposit 1$ for your toppings"))
 Extra_price_for_toppings = 1
 
 #Checking if the deposited money is enough to put toppings
-if money_deposit >= Extra_price_for_toppings :
+Change=money_deposit - Extra_price_for_toppings
+if money_deposit == Extra_price_for_toppings :
     print("You have deposited enough money to put toppings.")
-
+elif money_deposit >= Extra_price_for_toppings :  
+    print("Please take your change: ")
+    print(Change)
+else:
+  print("You didn't deposited enough money")  
+    
 print("Please choose your toppings that you wish to have on your icecream:")
 
 #Defining the list of toppings
@@ -74,11 +87,13 @@ elif choice==4:
 elif choice==5:
   print("You have chosen Chocolate chips on your icecream, \nExcellent choice!")     
 else:
-  print("Invalid choice!")  
+  print("Invalid choice! Please choose a number within 1 to 5")  
 
 choice=int(input("Proceed to buy? if YES choose 1, if NO choose 0(1/0):"))
 
 if choice==1:
  print("Please wait, Your icecream is on processing... \n\tThank you, Enjoy the taste of Heaven:)")
+elif choice==0:
+  print("You cancelled your order!") 
 else:
-  print("Sorry! :(") 
+  print("Invalid choice!")
